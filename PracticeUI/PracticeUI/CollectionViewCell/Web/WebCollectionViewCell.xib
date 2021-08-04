@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WebCollectionViewCell" customModule="PracticeUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="336"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="336"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5m-19-QMy">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="336"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-sS-7fa">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="336"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="I5m-19-QMy" secondAttribute="trailing" id="7Sa-Dn-AAG"/>
+                <constraint firstItem="I5m-19-QMy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BOg-bG-e9t"/>
+                <constraint firstAttribute="bottom" secondItem="I5m-19-QMy" secondAttribute="bottom" id="Ctz-Is-d2I"/>
+                <constraint firstAttribute="bottom" secondItem="I5m-19-QMy" secondAttribute="bottom" id="E6g-Qe-O00"/>
+                <constraint firstAttribute="trailing" secondItem="I5m-19-QMy" secondAttribute="trailing" id="NNx-Dn-w2S"/>
+                <constraint firstItem="I5m-19-QMy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OpL-D0-hIK"/>
+                <constraint firstAttribute="trailing" secondItem="c3o-sS-7fa" secondAttribute="trailing" id="SPi-hf-DDd"/>
+                <constraint firstItem="I5m-19-QMy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WzO-9r-FHQ"/>
+                <constraint firstItem="I5m-19-QMy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aTD-ER-s6Q"/>
+                <constraint firstItem="c3o-sS-7fa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="du9-g7-3ql"/>
+                <constraint firstAttribute="bottom" secondItem="c3o-sS-7fa" secondAttribute="bottom" id="lW5-bi-6MI"/>
+                <constraint firstItem="c3o-sS-7fa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lhG-Vf-BXO"/>
+            </constraints>
+            <size key="customSize" width="288" height="336"/>
+            <connections>
+                <outlet property="indicatorView" destination="c3o-sS-7fa" id="k4m-QR-6hP"/>
+                <outlet property="webView" destination="I5m-19-QMy" id="bBU-m8-tUz"/>
+            </connections>
+            <point key="canvasLocation" x="217.39130434782609" y="183.48214285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
