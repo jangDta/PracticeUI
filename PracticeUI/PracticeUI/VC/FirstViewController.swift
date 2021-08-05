@@ -11,6 +11,15 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var webViewHeight: CGFloat = 300
+    var webViewPosition: Int = 0
+    
+    let urlStrings = ["https://www.cocoapods.org/",
+                      "https://swiftrocks.com/",
+                      "https://fluffy.es/",
+                      "http://reactivex.io/",
+                      "https://iosexample.com/"]
+    
     override func viewDidAppear(_ animated: Bool) {
         if #available(iOS 13.0, *) {
             let statusBar = UIView(frame: UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
@@ -62,11 +71,14 @@ extension FirstViewController: UICollectionViewDataSource {
         
         if indexPath.row == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
+            cell.delegate = self
             return cell
         }
         
         if indexPath.row == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WebCollectionViewCell.reuseIdentifier, for: indexPath) as! WebCollectionViewCell
+            cell.request(urlStrings[webViewPosition])
+            cell.delegate = self
             return cell
         }
         
@@ -99,9 +111,30 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
         }
         
         if indexPath.row == 3 {
-            return CGSize(width: width, height: 2185)
+            return CGSize(width: width, height: webViewHeight)
         }
         
         return CGSize(width: width, height: 100)
+    }
+}
+
+extension FirstViewController: WebViewContentHeightDelegate {
+    func calculate(height: CGFloat) {
+        webViewHeight = height
+        collectionView.reloadItems(at: [IndexPath(row: 3, section: 0)])
+    }
+}
+
+extension FirstViewController: CategoryCollectionViewCellSelectedDelegate {
+    func didSelect(index: Int) {
+        if index > 4 { return }
+        print("didSelect \(index)")
+        webViewPosition = index
+        
+        // 이때 IndexPath가 꼭 3이 아닐수 있음 -> 터짐
+        let cell = collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as! WebCollectionViewCell
+        
+        cell.request(urlStrings[webViewPosition])
+        
     }
 }

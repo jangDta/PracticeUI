@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol CategoryCollectionViewCellSelectedDelegate {
+    func didSelect(index: Int)
+}
+
 class CategoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let categoryItems = ["예적금", "외화", "대출", "연금*ISA", "카드", "증권", "투자"]
+    
+    var delegate: CategoryCollectionViewCellSelectedDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +41,14 @@ extension CategoryCollectionViewCell: UICollectionViewDelegate, UICollectionView
         if indexPath.row == 0 {
             cell.isSelected = true
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+            delegate?.didSelect(index: indexPath.row)
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelect(index: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
