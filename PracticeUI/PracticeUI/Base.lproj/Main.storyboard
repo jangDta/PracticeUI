@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xdT-Uu-Kwh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xdT-Uu-Kwh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -22,6 +23,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="GXb-6I-4ph" kind="relationship" relationship="viewControllers" id="5mR-OH-6zk"/>
+                        <segue destination="PAs-bK-Puy" kind="relationship" relationship="viewControllers" id="J0L-u4-LB9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRX-rM-2kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,11 +95,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOy-At-oeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="74"/>
+            <point key="canvasLocation" x="1081" y="-50"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="o1k-Qg-jMb">
+            <objects>
+                <viewController restorationIdentifier="SecondViewController" storyboardIdentifier="SecondViewController" id="PAs-bK-Puy" customClass="SecondViewController" customModule="PracticeUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mia-Rt-5Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAM-Le-LQx" customClass="Floaty" customModule="Floaty">
+                                <rect key="frame" x="334" y="733" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2I2-ur-EHZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="x1k-U8-t91"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage">
+                                        <imageReference key="value" image="person" catalog="system" symbolScale="large"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoCloseOnTap" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lhh-5J-P3u">
+                                <rect key="frame" x="177" y="733" width="60" height="60"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9V-yx-fyO">
+                                        <rect key="frame" x="-30" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="xTh-v9-xta"/>
+                                            <constraint firstAttribute="height" constant="30" id="yHh-9g-iSa"/>
+                                        </constraints>
+                                        <state key="normal" title="이벤트/쿠폰"/>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-EV-Zo1">
+                                        <rect key="frame" x="-30" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="eDa-Bg-s3G"/>
+                                            <constraint firstAttribute="height" constant="30" id="vNA-uZ-vYc"/>
+                                        </constraints>
+                                        <state key="normal" title="상품몰"/>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7v-9c-7F6">
+                                        <rect key="frame" x="-30" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5vy-1G-NWO"/>
+                                            <constraint firstAttribute="width" constant="120" id="dm2-ZC-9b8"/>
+                                        </constraints>
+                                        <state key="normal" title="오픈뱅킹"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoB-Zf-5o0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.23921568630000001" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7xj-Wr-MLt"/>
+                                            <constraint firstAttribute="width" constant="60" id="Y3T-u9-oj8"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="person.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="floatingAction:" destination="PAs-bK-Puy" eventType="touchUpInside" id="xuE-bc-Fh6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tct-5o-Qiw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tct-5o-Qiw" firstAttribute="trailing" secondItem="OAM-Le-LQx" secondAttribute="trailing" constant="20" id="8MF-ct-6GA"/>
+                            <constraint firstItem="Tct-5o-Qiw" firstAttribute="bottom" secondItem="lhh-5J-P3u" secondAttribute="bottom" constant="20" id="BcI-O7-sWL"/>
+                            <constraint firstItem="Tct-5o-Qiw" firstAttribute="bottom" secondItem="OAM-Le-LQx" secondAttribute="bottom" constant="20" id="PSK-mo-KUv"/>
+                            <constraint firstItem="lhh-5J-P3u" firstAttribute="centerX" secondItem="Tct-5o-Qiw" secondAttribute="centerX" id="YEF-He-UmG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="cloud.fill" catalog="system" id="d9C-d6-nP0"/>
+                    <connections>
+                        <outlet property="floating" destination="xoB-Zf-5o0" id="r5z-q7-XDE"/>
+                        <outlet property="floating1" destination="Z7v-9c-7F6" id="2fI-10-9fm"/>
+                        <outlet property="floating2" destination="OZX-EV-Zo1" id="4v3-dO-F7v"/>
+                        <outlet property="floating3" destination="b9V-yx-fyO" id="vKo-YX-csT"/>
+                        <outlet property="floaty" destination="OAM-Le-LQx" id="vmV-ag-1zM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yej-OG-cCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="637"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="84"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
