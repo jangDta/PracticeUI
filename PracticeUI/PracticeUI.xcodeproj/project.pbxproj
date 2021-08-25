@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13BFB76126BB7A3B00EE6D6D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */; };
+		13CDE67326D46C5000E7040D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE67226D46C4F00E7040D /* TabBarViewController.swift */; };
 		155E0B6226BAA17F00365F42 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0B6126BAA17F00365F42 /* CustomCollectionViewFlowLayout.swift */; };
 		155E0B6626BAA6B900365F42 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0B6426BAA6B900365F42 /* MainCollectionViewCell.swift */; };
 		155E0B6726BAA6B900365F42 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155E0B6526BAA6B900365F42 /* MainCollectionViewCell.xib */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		13CDE67226D46C4F00E7040D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		155E0B6126BAA17F00365F42 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		155E0B6426BAA6B900365F42 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		155E0B6526BAA6B900365F42 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		1592A61326BA9A8700569D69 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				13CDE67226D46C4F00E7040D /* TabBarViewController.swift */,
 				1592A61426BA9B1D00569D69 /* FirstViewController.swift */,
 				13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */,
 			);
@@ -335,6 +338,7 @@
 				155E0B7F26BACE7800365F42 /* UIActivityIndicatorView+Extension.swift in Sources */,
 				155E0B7C26BACBC200365F42 /* WebCollectionViewCell.swift in Sources */,
 				155E0B6626BAA6B900365F42 /* MainCollectionViewCell.swift in Sources */,
+				13CDE67326D46C5000E7040D /* TabBarViewController.swift in Sources */,
 				155E0B7326BAAFAA00365F42 /* CategoryItemCollectionViewCell.swift in Sources */,
 				1592A5FE26BA9A2300569D69 /* AppDelegate.swift in Sources */,
 				13BFB76126BB7A3B00EE6D6D /* SecondViewController.swift in Sources */,

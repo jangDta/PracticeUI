@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="GfA-eS-0Wb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xdT-Uu-Kwh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="xdT-Uu-Kwh" customClass="TabBarViewController" customModule="PracticeUI" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9FW-oF-UXG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
