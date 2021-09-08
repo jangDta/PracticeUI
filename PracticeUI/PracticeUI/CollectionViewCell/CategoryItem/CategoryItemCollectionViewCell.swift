@@ -27,7 +27,7 @@ class CategoryItemCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cardView.layer.cornerRadius = 20
+        cardView.layer.cornerRadius = 6
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = #colorLiteral(red: 0.8941176471, green: 0.8941176471, blue: 0.8941176471, alpha: 1).cgColor
         cardView.layer.masksToBounds = true

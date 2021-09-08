@@ -1,20 +1,26 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Floaty (4.2.0)
   - JJFloatingActionButton (2.5.0)
 
 DEPENDENCIES:
+  - Charts
   - Floaty (~> 4.2.0)
   - JJFloatingActionButton
 
 SPEC REPOS:
   trunk:
+    - Charts
     - Floaty
     - JJFloatingActionButton
 
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
 
-PODFILE CHECKSUM: 931ce9a59516bc2107ecb456532a018a4c661f28
+PODFILE CHECKSUM: 304b1a49387a89bb96b1844910fe6b6bcd345c32
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.2

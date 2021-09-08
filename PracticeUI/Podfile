@@ -9,5 +9,6 @@ target 'PracticeUI' do
 
 	pod 'Floaty', '~> 4.2.0'
 	pod 'JJFloatingActionButton'
+	pod 'Charts'
 
 end

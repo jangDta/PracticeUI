@@ -24,11 +24,12 @@
                     <connections>
                         <segue destination="GXb-6I-4ph" kind="relationship" relationship="viewControllers" id="5mR-OH-6zk"/>
                         <segue destination="PAs-bK-Puy" kind="relationship" relationship="viewControllers" id="J0L-u4-LB9"/>
+                        <segue destination="f2z-il-KJd" kind="relationship" relationship="viewControllers" id="Ege-Vd-YJS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRX-rM-2kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
+            <point key="canvasLocation" x="152" y="-428"/>
         </scene>
         <!--First-->
         <scene sceneID="OJO-3A-S5D">
@@ -95,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOy-At-oeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="-50"/>
+            <point key="canvasLocation" x="-2365" y="475"/>
         </scene>
         <!--Second-->
         <scene sceneID="o1k-Qg-jMb">
@@ -185,16 +186,102 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yej-OG-cCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="637"/>
+            <point key="canvasLocation" x="-843" y="475"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="UQX-8b-hbe">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="f2z-il-KJd" customClass="ThirdViewController" customModule="PracticeUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x1r-bV-YAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1bU-SP-Gar">
+                                <rect key="frame" x="40" y="104" width="217" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1B-1k-07h">
+                                        <rect key="frame" x="0.0" y="2" width="52" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="한눈에">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tap:" destination="f2z-il-KJd" eventType="touchUpInside" id="aBq-wi-Ovf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-ge-EeY">
+                                        <rect key="frame" x="72" y="2" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="자산">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tap:" destination="f2z-il-KJd" eventType="touchUpInside" id="0xX-ax-7Yi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-nd-aR7">
+                                        <rect key="frame" x="127" y="2" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="소비">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tap:" destination="f2z-il-KJd" eventType="touchUpInside" id="iZ9-rw-Ibd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-aw-qSC">
+                                        <rect key="frame" x="182" y="2" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="목표">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tap:" destination="f2z-il-KJd" eventType="touchUpInside" id="NNG-QV-on7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h75-nZ-p5G"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IK7-7H-onh">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nmi-1a-jNu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nmi-1a-jNu" firstAttribute="bottom" secondItem="IK7-7H-onh" secondAttribute="bottom" id="6Id-ef-w5A"/>
+                            <constraint firstItem="1bU-SP-Gar" firstAttribute="leading" secondItem="Nmi-1a-jNu" secondAttribute="leading" constant="40" id="6VP-3Y-ARr"/>
+                            <constraint firstItem="IK7-7H-onh" firstAttribute="top" secondItem="1bU-SP-Gar" secondAttribute="bottom" id="FUc-vH-M6Y"/>
+                            <constraint firstItem="IK7-7H-onh" firstAttribute="leading" secondItem="Nmi-1a-jNu" secondAttribute="leading" id="cja-H1-HA4"/>
+                            <constraint firstItem="Nmi-1a-jNu" firstAttribute="trailing" secondItem="IK7-7H-onh" secondAttribute="trailing" id="gQs-xT-DS3"/>
+                            <constraint firstItem="1bU-SP-Gar" firstAttribute="top" secondItem="Nmi-1a-jNu" secondAttribute="top" constant="60" id="jTn-bh-9Xy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" image="flame.fill" catalog="system" id="C2h-V1-qMq"/>
+                    <connections>
+                        <outlet property="containerView" destination="IK7-7H-onh" id="YiM-BU-aPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUv-ZA-gBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="475"/>
         </scene>
     </scenes>
     <resources>
         <image name="cloud.fill" catalog="system" width="128" height="84"/>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
