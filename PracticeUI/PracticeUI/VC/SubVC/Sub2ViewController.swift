@@ -16,7 +16,7 @@ class Sub2ViewController: UIViewController {
     var sections: [Section] = [
         Section(name: "Section1", items: ["Item1", "Item2", "Item3"], expandable: false),
         Section(name: "Section2", items: ["Item1", "Item2"], expandable: false),
-        Section(name: "Section3", items: ["Item1", "Item2", "Item3"], expandable: false),
+        Section(name: "Section3", items: ["Item1", "Item2", "Item3", "Item1", "Item2", "Item3"], expandable: false),
         Section(name: "Section4", items: ["내통장리포트", "내카드리포트", "내 맘대로 목표추가", "Item4", "목표 추천받기", "쏠리치", "테마별 목표 추가", "소액투자", "건강자산관리"], expandable: false)
     ]
     
@@ -88,12 +88,20 @@ extension Sub2ViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width / 2 - 20, height: 200)
+        return CGSize(width: (self.view.frame.width - 40 - 10) / 2, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        if section == sections.count - 1 { return UIEdgeInsets.zero }
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -101,7 +109,7 @@ extension Sub2ViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if !animatedIndexPaths.contains(indexPath) {
             animatedIndexPaths.append(indexPath)
-            let animation = AnimationFactory.makeMoveUpWithBounce(rowHeight: cell.frame.height, duration: 1.0, delayFactor: 0.2)
+            let animation = AnimationFactory.makeMoveUpWithBounce(rowHeight: cell.frame.height, duration: 0.5, delayFactor: 0.1)
             let animator = Animator(animation: animation)
             DispatchQueue.main.async {
                 animator.animate(cell: cell, at: indexPath, in: collectionView)

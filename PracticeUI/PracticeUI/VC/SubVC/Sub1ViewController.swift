@@ -88,8 +88,6 @@ extension Sub1ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: Sub1TableViewCell.reuseIdentifier, for: indexPath) as! Sub1TableViewCell
-//        cell.title.text = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Sub1ContentTableViewCell.reuseIdentifier, for: indexPath) as! Sub1ContentTableViewCell
         cell.model = sections[indexPath.section].items
         return cell
@@ -107,4 +105,36 @@ extension Sub1ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
+    
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        view.alpha = 0
+//        view.transform = CGAffineTransform(translationX: 0, y: view.frame.height / 4)
+//
+//        UIView.animate(
+//            withDuration: 1.0,
+//            delay: 0.2 * Double(section),
+//            usingSpringWithDamping: 0.7,
+//            initialSpringVelocity: 0.2,
+//            options: [.curveEaseInOut],
+//            animations: {
+//                view.alpha = 1
+//                view.transform = CGAffineTransform(translationX: 0, y: 0)
+//        })
+//    }
+//
+//    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+//        view.alpha = 0
+//        view.transform = CGAffineTransform(translationX: 0, y: view.frame.height / 4)
+//
+//        UIView.animate(
+//            withDuration: 0.5,
+//            delay: 0.2 * Double(section),
+//            usingSpringWithDamping: 0.9,
+//            initialSpringVelocity: 0.1,
+//            options: [.curveEaseInOut],
+//            animations: {
+//                view.alpha = 1
+//                view.transform = CGAffineTransform(translationX: 0, y: 0)
+//        })
+//    }
 }

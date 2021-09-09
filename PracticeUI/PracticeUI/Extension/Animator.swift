@@ -46,8 +46,8 @@ enum AnimationFactory {
     
     static func makeMoveUpWithBounce(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
         return { cell, indexPath, tableView in
-            cell.alpha = 0
-            cell.transform = CGAffineTransform(translationX: 0, y: rowHeight / 4)
+            cell.alpha = 0.05
+            cell.transform = CGAffineTransform(translationX: 0, y: rowHeight / 10)
 
             UIView.animate(
                 withDuration: duration,

@@ -24,6 +24,11 @@ class ThirdViewController: UIViewController {
         return vc
     }()
     
+    private lazy var sub3VC: Sub3ViewController = {
+        let vc = Sub3ViewController(nibName: Sub3ViewController.reuseIdentifier, bundle: nil)
+        return vc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         add(asChildViewController: sub1VC)
@@ -37,12 +42,21 @@ class ThirdViewController: UIViewController {
         if sender.tag == 1 {
             sub1VC.view.isHidden = false
             sub2VC.view.isHidden = true
-        } else {
+            sub3VC.view.isHidden = true
+        } else if sender.tag == 2 {
+            if !children.contains(sub3VC) {
+                add(asChildViewController: sub3VC)
+            }
+            sub1VC.view.isHidden = true
+            sub2VC.view.isHidden = true
+            sub3VC.view.isHidden = false
+        }else {
             if !children.contains(sub2VC) {
                 add(asChildViewController: sub2VC)
             }
             sub1VC.view.isHidden = true
             sub2VC.view.isHidden = false
+            sub3VC.view.isHidden = true
         }
     }
     

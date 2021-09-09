@@ -18,28 +18,50 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-1s-Re5">
-                        <rect key="frame" x="75.5" y="102.5" width="55" height="27"/>
+                        <rect key="frame" x="75.5" y="40" width="55" height="27"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHV-P9-J0o" customClass="PieChartView" customModule="Charts">
+                        <rect key="frame" x="76" y="102" width="120" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-O4-208">
+                                <rect key="frame" x="33.5" y="47" width="53.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.69411764705882351" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="KoT-yN-hPy"/>
+                            <constraint firstItem="cGb-O4-208" firstAttribute="centerY" secondItem="OHV-P9-J0o" secondAttribute="centerY" id="XHZ-Hw-TaM"/>
+                            <constraint firstAttribute="height" constant="120" id="dw5-Uu-Ufg"/>
+                            <constraint firstItem="cGb-O4-208" firstAttribute="centerX" secondItem="OHV-P9-J0o" secondAttribute="centerX" id="kvN-3W-Q5H"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="yqj-1s-Re5" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="qgk-SI-G0K"/>
-                <constraint firstItem="yqj-1s-Re5" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="w71-vZ-Ztg"/>
+                <constraint firstItem="yqj-1s-Re5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="40" id="26O-FD-62e"/>
+                <constraint firstItem="yqj-1s-Re5" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="9iL-hf-X6n"/>
+                <constraint firstAttribute="trailing" secondItem="OHV-P9-J0o" secondAttribute="trailing" constant="10" id="Ltv-Zi-UxO"/>
+                <constraint firstAttribute="bottom" secondItem="OHV-P9-J0o" secondAttribute="bottom" constant="10" id="bd6-GF-ewe"/>
             </constraints>
             <size key="customSize" width="206" height="232"/>
             <connections>
+                <outlet property="chart" destination="OHV-P9-J0o" id="KtZ-nc-2iB"/>
+                <outlet property="percentLabel" destination="cGb-O4-208" id="Pkh-Li-s1B"/>
                 <outlet property="title" destination="yqj-1s-Re5" id="gYQ-7u-WUH"/>
             </connections>
             <point key="canvasLocation" x="250.72463768115944" y="198.88392857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

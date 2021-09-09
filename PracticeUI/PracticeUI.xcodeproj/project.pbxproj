@@ -16,6 +16,10 @@
 		13BD2C2926E6F1A000DB560B /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C2726E6F1A000DB560B /* CollectionHeaderView.swift */; };
 		13BD2C2A26E6F1A000DB560B /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BD2C2826E6F1A000DB560B /* CollectionHeaderView.xib */; };
 		13BD2C3426E83A4F00DB560B /* AlignCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C3326E83A4F00DB560B /* AlignCollectionViewFlowLayout.swift */; };
+		13BD2C4E26E8722100DB560B /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C4C26E8722100DB560B /* AccountTableViewCell.swift */; };
+		13BD2C4F26E8722100DB560B /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BD2C4D26E8722100DB560B /* AccountTableViewCell.xib */; };
+		13BD2C5326E8735F00DB560B /* Sub3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C5126E8735F00DB560B /* Sub3ViewController.swift */; };
+		13BD2C5426E8735F00DB560B /* Sub3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BD2C5226E8735F00DB560B /* Sub3ViewController.xib */; };
 		13BFB76126BB7A3B00EE6D6D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */; };
 		13CDE67326D46C5000E7040D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE67226D46C4F00E7040D /* TabBarViewController.swift */; };
 		13CE7D9D26D6159500834777 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE7D9C26D6159500834777 /* ThirdViewController.swift */; };
@@ -62,6 +66,10 @@
 		13BD2C2726E6F1A000DB560B /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		13BD2C2826E6F1A000DB560B /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		13BD2C3326E83A4F00DB560B /* AlignCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		13BD2C4C26E8722100DB560B /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		13BD2C4D26E8722100DB560B /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		13BD2C5126E8735F00DB560B /* Sub3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub3ViewController.swift; sourceTree = "<group>"; };
+		13BD2C5226E8735F00DB560B /* Sub3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sub3ViewController.xib; sourceTree = "<group>"; };
 		13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		13CDE67226D46C4F00E7040D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		13CE7D9C26D6159500834777 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +147,8 @@
 				13CE7DA226D6182200834777 /* Sub1ViewController.xib */,
 				13CE7DA626D6183300834777 /* Sub2ViewController.swift */,
 				13CE7DA726D6183300834777 /* Sub2ViewController.xib */,
+				13BD2C5126E8735F00DB560B /* Sub3ViewController.swift */,
+				13BD2C5226E8735F00DB560B /* Sub3ViewController.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -162,6 +172,8 @@
 				13CE7E7A26DC619300834777 /* Sub1HeaderCell.xib */,
 				13CE7E7E26DC61C400834777 /* Sub1FooterCell.swift */,
 				13CE7E7F26DC61C400834777 /* Sub1FooterCell.xib */,
+				13BD2C4C26E8722100DB560B /* AccountTableViewCell.swift */,
+				13BD2C4D26E8722100DB560B /* AccountTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -380,6 +392,7 @@
 			files = (
 				13CE7DA926D6183300834777 /* Sub2ViewController.xib in Resources */,
 				1592A60A26BA9A2700569D69 /* LaunchScreen.storyboard in Resources */,
+				13BD2C5426E8735F00DB560B /* Sub3ViewController.xib in Resources */,
 				13BD2C1326E5D6FF00DB560B /* Sub1ContentTableViewCell.xib in Resources */,
 				13CE7DA426D6182200834777 /* Sub1ViewController.xib in Resources */,
 				155E0B7426BAAFAA00365F42 /* CategoryItemCollectionViewCell.xib in Resources */,
@@ -387,6 +400,7 @@
 				1592A60726BA9A2700569D69 /* Assets.xcassets in Resources */,
 				13CE7E7726DC601800834777 /* Sub1TableViewCell.xib in Resources */,
 				1592A60526BA9A2300569D69 /* Main.storyboard in Resources */,
+				13BD2C4F26E8722100DB560B /* AccountTableViewCell.xib in Resources */,
 				13BD2C2A26E6F1A000DB560B /* CollectionHeaderView.xib in Resources */,
 				155E0B7D26BACBC200365F42 /* WebCollectionViewCell.xib in Resources */,
 				13CE7E8126DC61C400834777 /* Sub1FooterCell.xib in Resources */,
@@ -445,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BD2C5326E8735F00DB560B /* Sub3ViewController.swift in Sources */,
 				13BD2C1226E5D6FF00DB560B /* Sub1ContentTableViewCell.swift in Sources */,
 				1592A61526BA9B1D00569D69 /* FirstViewController.swift in Sources */,
 				155E0B7F26BACE7800365F42 /* UIActivityIndicatorView+Extension.swift in Sources */,
@@ -470,6 +485,7 @@
 				155E0B6C26BAA6E300365F42 /* CategoryCollectionViewCell.swift in Sources */,
 				13CE7DA326D6182200834777 /* Sub1ViewController.swift in Sources */,
 				155E0B7826BABFE100365F42 /* UIApplication+Extension.swift in Sources */,
+				13BD2C4E26E8722100DB560B /* AccountTableViewCell.swift in Sources */,
 				13CE7E8026DC61C400834777 /* Sub1FooterCell.swift in Sources */,
 				1592A61826BA9D9A00569D69 /* UIColor+Extension.swift in Sources */,
 			);
