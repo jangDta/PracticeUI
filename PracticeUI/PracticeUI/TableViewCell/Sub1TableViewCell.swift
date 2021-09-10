@@ -9,6 +9,7 @@ import UIKit
 
 class Sub1TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var expandButton: UIButton!
@@ -25,6 +26,9 @@ class Sub1TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.backView.clipsToBounds = true
+        self.backView.layer.cornerRadius = 10
         
         tableView.register(UINib(nibName: AccountTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: AccountTableViewCell.reuseIdentifier)
     }

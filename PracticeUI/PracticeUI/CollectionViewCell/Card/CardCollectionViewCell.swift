@@ -22,6 +22,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         self.contentView.layer.cornerRadius = 10
         self.contentView.layer.borderWidth = 1.0
+        self.contentView.backgroundColor = .white
         self.contentView.layer.borderColor = UIColor.clear.cgColor
         self.contentView.layer.masksToBounds = true
         

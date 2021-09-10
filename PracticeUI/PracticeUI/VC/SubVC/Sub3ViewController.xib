@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,25 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-vw-IUw">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-vw-IUw">
+                    <rect key="frame" x="20" y="12" width="374" height="884"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="xIM-vw-IUw" secondAttribute="bottom" id="FAG-9s-3ek"/>
-                <constraint firstItem="xIM-vw-IUw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tm5-k9-cGL"/>
-                <constraint firstItem="xIM-vw-IUw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uYd-lf-C7B"/>
-                <constraint firstAttribute="trailing" secondItem="xIM-vw-IUw" secondAttribute="trailing" id="xSp-Z6-kxR"/>
+                <constraint firstItem="xIM-vw-IUw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Tm5-k9-cGL"/>
+                <constraint firstItem="xIM-vw-IUw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="uYd-lf-C7B"/>
+                <constraint firstAttribute="trailing" secondItem="xIM-vw-IUw" secondAttribute="trailing" constant="20" id="xSp-Z6-kxR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="141" y="154"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

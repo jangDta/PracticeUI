@@ -20,6 +20,12 @@
 		13BD2C4F26E8722100DB560B /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BD2C4D26E8722100DB560B /* AccountTableViewCell.xib */; };
 		13BD2C5326E8735F00DB560B /* Sub3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C5126E8735F00DB560B /* Sub3ViewController.swift */; };
 		13BD2C5426E8735F00DB560B /* Sub3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BD2C5226E8735F00DB560B /* Sub3ViewController.xib */; };
+		13BD2C5E26E9BE9300DB560B /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C5D26E9BE9200DB560B /* FinanceViewModel.swift */; };
+		13BD2C6126E9C32400DB560B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C6026E9C32400DB560B /* Dynamic.swift */; };
+		13BD2C6826E9CC6B00DB560B /* OnceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C6726E9CC6B00DB560B /* OnceViewModel.swift */; };
+		13BD2C6C26E9CD0100DB560B /* ScrapingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C6B26E9CD0100DB560B /* ScrapingService.swift */; };
+		13BD2C7426E9CFDC00DB560B /* FinanceDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C7326E9CFDC00DB560B /* FinanceDataStorage.swift */; };
+		13BD2C7726E9D6B000DB560B /* OnceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD2C7626E9D6B000DB560B /* OnceService.swift */; };
 		13BFB76126BB7A3B00EE6D6D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */; };
 		13CDE67326D46C5000E7040D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE67226D46C4F00E7040D /* TabBarViewController.swift */; };
 		13CE7D9D26D6159500834777 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE7D9C26D6159500834777 /* ThirdViewController.swift */; };
@@ -70,6 +76,12 @@
 		13BD2C4D26E8722100DB560B /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		13BD2C5126E8735F00DB560B /* Sub3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub3ViewController.swift; sourceTree = "<group>"; };
 		13BD2C5226E8735F00DB560B /* Sub3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sub3ViewController.xib; sourceTree = "<group>"; };
+		13BD2C5D26E9BE9200DB560B /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
+		13BD2C6026E9C32400DB560B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		13BD2C6726E9CC6B00DB560B /* OnceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceViewModel.swift; sourceTree = "<group>"; };
+		13BD2C6B26E9CD0100DB560B /* ScrapingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingService.swift; sourceTree = "<group>"; };
+		13BD2C7326E9CFDC00DB560B /* FinanceDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDataStorage.swift; sourceTree = "<group>"; };
+		13BD2C7626E9D6B000DB560B /* OnceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceService.swift; sourceTree = "<group>"; };
 		13BFB76026BB7A3B00EE6D6D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		13CDE67226D46C4F00E7040D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		13CE7D9C26D6159500834777 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +152,32 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		13BD2C5C26E9BE6800DB560B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				13BD2C5D26E9BE9200DB560B /* FinanceViewModel.swift */,
+				13BD2C6726E9CC6B00DB560B /* OnceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13BD2C6A26E9CC9400DB560B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				13BD2C6B26E9CD0100DB560B /* ScrapingService.swift */,
+				13BD2C7626E9D6B000DB560B /* OnceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		13BD2C7226E9CFBA00DB560B /* FinanceDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				13BD2C7326E9CFDC00DB560B /* FinanceDataStorage.swift */,
+			);
+			path = FinanceDataStorage;
+			sourceTree = "<group>";
+		};
 		13CE7D9F26D616D100834777 /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				13CE7E6126DC59EC00834777 /* Section.swift */,
+				13BD2C6026E9C32400DB560B /* Dynamic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,7 +296,10 @@
 		1592A5FC26BA9A2300569D69 /* PracticeUI */ = {
 			isa = PBXGroup;
 			children = (
+				13BD2C7226E9CFBA00DB560B /* FinanceDataStorage */,
+				13BD2C6A26E9CC9400DB560B /* Service */,
 				13CE7E6026DC59D600834777 /* Model */,
+				13BD2C5C26E9BE6800DB560B /* ViewModel */,
 				1592A61626BA9D8900569D69 /* Extension */,
 				1592A61326BA9A8700569D69 /* VC */,
 				13CE7E6426DC5B6A00834777 /* TableViewCell */,
@@ -464,11 +506,14 @@
 				1592A61526BA9B1D00569D69 /* FirstViewController.swift in Sources */,
 				155E0B7F26BACE7800365F42 /* UIActivityIndicatorView+Extension.swift in Sources */,
 				155E0B7C26BACBC200365F42 /* WebCollectionViewCell.swift in Sources */,
+				13BD2C5E26E9BE9300DB560B /* FinanceViewModel.swift in Sources */,
 				155E0B6626BAA6B900365F42 /* MainCollectionViewCell.swift in Sources */,
 				13CDE67326D46C5000E7040D /* TabBarViewController.swift in Sources */,
 				155E0B7326BAAFAA00365F42 /* CategoryItemCollectionViewCell.swift in Sources */,
 				13CE7DA826D6183300834777 /* Sub2ViewController.swift in Sources */,
+				13BD2C6126E9C32400DB560B /* Dynamic.swift in Sources */,
 				1592A5FE26BA9A2300569D69 /* AppDelegate.swift in Sources */,
+				13BD2C6C26E9CD0100DB560B /* ScrapingService.swift in Sources */,
 				13CE7D9D26D6159500834777 /* ThirdViewController.swift in Sources */,
 				13CE7E6226DC59EC00834777 /* Section.swift in Sources */,
 				13BFB76126BB7A3B00EE6D6D /* SecondViewController.swift in Sources */,
@@ -481,6 +526,7 @@
 				13BD2C1A26E5E20100DB560B /* UITableView+Extension.swift in Sources */,
 				155E0B6226BAA17F00365F42 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				13BD2C3426E83A4F00DB560B /* AlignCollectionViewFlowLayout.swift in Sources */,
+				13BD2C7726E9D6B000DB560B /* OnceService.swift in Sources */,
 				13CE7E7626DC601800834777 /* Sub1TableViewCell.swift in Sources */,
 				155E0B6C26BAA6E300365F42 /* CategoryCollectionViewCell.swift in Sources */,
 				13CE7DA326D6182200834777 /* Sub1ViewController.swift in Sources */,
@@ -488,6 +534,8 @@
 				13BD2C4E26E8722100DB560B /* AccountTableViewCell.swift in Sources */,
 				13CE7E8026DC61C400834777 /* Sub1FooterCell.swift in Sources */,
 				1592A61826BA9D9A00569D69 /* UIColor+Extension.swift in Sources */,
+				13BD2C6826E9CC6B00DB560B /* OnceViewModel.swift in Sources */,
+				13BD2C7426E9CFDC00DB560B /* FinanceDataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

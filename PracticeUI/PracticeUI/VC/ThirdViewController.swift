@@ -13,6 +13,8 @@ class ThirdViewController: UIViewController {
     
     var childControllers: [UIViewController] = []
     
+    var viewModel: FinanceViewModelProtocol = FinanceViewModel(scrapingService: ScrapingService())
+    
     private lazy var sub1VC: Sub1ViewController = {
         let vc = Sub1ViewController(nibName: Sub1ViewController.reuseIdentifier, bundle: nil)
         vc.delegate = self
@@ -25,13 +27,34 @@ class ThirdViewController: UIViewController {
     }()
     
     private lazy var sub3VC: Sub3ViewController = {
-        let vc = Sub3ViewController(nibName: Sub3ViewController.reuseIdentifier, bundle: nil)
+        let viewModel = OnceViewModel(onceService: OnceService(storage: FinanceDataStorage()))
+        let vc = Sub3ViewController(viewModel: viewModel)
         return vc
     }()
     
+    private func bind() {
+        // 자산 탭 인덱스
+        viewModel.index.bind { [weak self] in
+            guard let self = self else { return }
+            switch $0 {
+                case .한눈에:
+                    self.sub3VC.view.isHidden = false
+                    self.sub2VC.view.isHidden = true
+                case .자산, .소비, .목표:
+                    if !self.children.contains(self.sub2VC) {
+                        self.add(asChildViewController: self.sub2VC)
+                    }
+                    self.sub3VC.view.isHidden = true
+                    self.sub2VC.view.isHidden = false
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        add(asChildViewController: sub1VC)
+        
+        bind()
+        add(asChildViewController: sub3VC)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,25 +62,8 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func tap(_ sender: UIButton) {
-        if sender.tag == 1 {
-            sub1VC.view.isHidden = false
-            sub2VC.view.isHidden = true
-            sub3VC.view.isHidden = true
-        } else if sender.tag == 2 {
-            if !children.contains(sub3VC) {
-                add(asChildViewController: sub3VC)
-            }
-            sub1VC.view.isHidden = true
-            sub2VC.view.isHidden = true
-            sub3VC.view.isHidden = false
-        }else {
-            if !children.contains(sub2VC) {
-                add(asChildViewController: sub2VC)
-            }
-            sub1VC.view.isHidden = true
-            sub2VC.view.isHidden = false
-            sub3VC.view.isHidden = true
-        }
+        guard let index = FinanceIndex.init(rawValue: sender.tag) else { return }
+        viewModel.currentIndex = index
     }
     
     private func add(asChildViewController viewController: UIViewController) {
@@ -86,6 +92,6 @@ class ThirdViewController: UIViewController {
 
 extension ThirdViewController: Sub1Delegate {
     func refresh() {
-        print("refresh")
+        viewModel.executeAllScraping()
     }
 }

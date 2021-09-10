@@ -16,8 +16,8 @@ class Sub2ViewController: UIViewController {
     var sections: [Section] = [
         Section(name: "Section1", items: ["Item1", "Item2", "Item3"], expandable: false),
         Section(name: "Section2", items: ["Item1", "Item2"], expandable: false),
-        Section(name: "Section3", items: ["Item1", "Item2", "Item3", "Item1", "Item2", "Item3"], expandable: false),
-        Section(name: "Section4", items: ["내통장리포트", "내카드리포트", "내 맘대로 목표추가", "Item4", "목표 추천받기", "쏠리치", "테마별 목표 추가", "소액투자", "건강자산관리"], expandable: false)
+        Section(name: "Section3", items: ["Item1", "Item2", "Item3", "Item1", "Item2", "Item3", "Item1", "Item2"], expandable: false),
+        Section(name: "Section4", items: ["내통장리포트", "내카드리포트", "내 맘대로 목표추가", "Item4", "목표 추천받기", "쏠리치", "테마별 목표 추가", "소액투자", "건강자산관리"], expandable: false),
     ]
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
